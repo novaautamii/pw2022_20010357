@@ -17,6 +17,10 @@ $karyawan = query("select * from karyawan");
 <body>
 
   <h3>Daftar karyawan</h3>
+  <a href="tambah.php">Tambah Data Karyawan</a>
+  <br><br>
+
+
   <table border="1" cellpadding="10" cellspasing="0">
     <tr>
       <th>#</th>

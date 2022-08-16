@@ -20,3 +20,24 @@ function query($query)
 
   return $rows;
 }
+
+
+function tambah($data)
+{
+  $db = koneksi();
+
+  $nama = htmlspecialchars($data['nama']);
+  $nik = htmlspecialchars($data['nik']);
+  $dept = htmlspecialchars($data['dept']);
+  $gambar = htmlspecialchars($data['gambar']);
+  $email = htmlspecialchars($data['email']);
+  $query = "insert into 
+            karyawan
+            values 
+            ('$nik','$nama','$email','$dept','','$gambar');
+            ";
+  mysqli_query($db, "$query");
+
+  echo mysqli_error($db);
+  return mysqli_affected_rows($db);
+}
