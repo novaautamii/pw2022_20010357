@@ -2,6 +2,11 @@
 
 require 'functions.php';
 
+if (!isset($_GET['id'])) {
+  header("location: index.php");
+  exit;
+}
+
 
 //mengambil id dari url
 $id = $_GET['id'];

@@ -56,7 +56,7 @@ function hapus($id)
 function ubah($data)
 {
   $db = koneksi();
-  $id = $data['id'];
+  $id = $_GET['id'];
 
   $nama = htmlspecialchars($data['nama']);
   $nik = htmlspecialchars($data['nik']);
